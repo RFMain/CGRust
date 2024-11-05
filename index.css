@@ -1,0 +1,140 @@
+/* index.css */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.timer-container {
+    position: absolute;
+    top: 16%;
+    left: 25%;
+    transform: translateX(-50%) rotate(-25deg);
+    font-size: 2em;
+    color: rgba(163, 120, 113, 1);
+    font-family: Arial, sans-serif;
+    animation: glowPulse 3s infinite;
+
+}
+
+@keyframes glowPulse {
+    0% {
+        text-shadow: 0 0 10px rgba(163, 120, 113, 0.5);
+        transform: translateX(-50%) rotate(-25deg) scale(1);
+        z-index: 0;
+    }
+    50% {
+        text-shadow: 0 0 20px rgba(163, 120, 113, 1);
+        transform: translateX(-50%) rotate(-25deg) scale(1.1);
+        z-index: 1;
+    }
+    100% {
+        text-shadow: 0 0 10px rgba(163, 120, 113, 0.5);
+        transform: translateX(-50%) rotate(-25deg) scale(1);
+        z-index: 0;
+    }
+}
+
+#timer {
+    display: inline-block;
+}
+
+#index {
+    font-family: 'Roboto', sans-serif;
+    display: grid;
+    height: 100vh;
+    width: 100%;
+    grid-template-rows: auto 1fr;
+    background-color: black;
+}
+
+#index .one {
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-size: 22px;
+    text-transform: uppercase;
+}
+
+#index .one img {
+    position: absolute;
+    z-index: 0;
+    max-width: 100%;
+    height: auto;
+}
+
+#index .one h1 {
+    position: relative;
+    color: rgba(211, 84, 0, 1);
+    z-index: 1;
+    text-align: center;
+    margin: 0 10px;
+}
+
+#index .one h1:first-of-type{
+    right: 10%;
+}
+
+#index .one h1:last-of-type{
+    left: 11%;
+}
+
+#index .two {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    padding: 20px;
+}
+
+#index .three {
+    display: grid;
+    grid-template-rows: auto auto;
+    background-color: rgba(20, 20, 20, 1);
+    border: rgba(211, 84, 0, 1) solid 1px;
+    max-width: 1000px;
+    width: 100%;
+}
+
+#index .three img {
+    width: 100%;
+    height: auto;
+}
+
+#index .three article {
+    background-color: rgba(226, 99, 19, 0.2);
+    text-align: center;
+    border-top: rgba(211, 84, 0, 1) solid 1px;
+    padding: 20px;
+}
+
+#index .three article h1 {
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: black;
+    margin-bottom: 10px;
+}
+
+#index .three article time {
+    font-size: 12px;
+    font-style: italic;
+    text-transform: uppercase;
+    color: black;
+    opacity: 0.3;
+}
+
+#index .three article p {
+    color: black;
+    text-align: left;
+    font-size: 20px;
+    line-height: 1.7em;
+    margin-top: 15px;
+}
