@@ -138,3 +138,11 @@ a {
     line-height: 1.7em;
     margin-top: 15px;
 }
+
+#index footer {
+    margin-bottom: 1%;
+    text-align: center;
+    background-color: black;
+    color: rgba(211, 84, 0, 1);
+    text-transform: uppercase;
+}
